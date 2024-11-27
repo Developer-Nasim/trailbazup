@@ -1,0 +1,182 @@
+@import url('https://fonts.google.com/specimen/Host+Grotesk?query=Host+Grotesk');
+
+.vfrc-widget {
+    color: #135fd9;
+    /* font-family: 'Source Code Pro', monospace; */
+    font-family: 'Host Grotesk', sans-serif;
+    font-size: 16px;
+}
+
+/* Header Styling */
+.vfrc-header {
+    display: none;
+    visibility: hidden;
+}
+
+.vfrc-assistant-info {
+    display: none;
+    visibility: hidden;
+}
+
+.vfrc-footer--watermark {
+    display: none;
+    visibility: hidden;
+}
+
+.vfrc-assistant-info--title,
+.vfrc-assistant-info--description {
+    color: #ffffff;
+    display: none;
+    visibility: hidden;
+}
+
+.vfrc-chat {
+    scrollbar-width: none;
+    background-color: #a9a9a9;
+}
+
+
+
+.vfrc-system-response .vfrc-message {
+    background-color: #ffffff;
+    color: #000;
+}
+
+/* new added */
+.vfrc-chat--dialog {
+    scrollbar-width: none;
+}
+
+
+
+.vfrc-user-response .vfrc-message {
+    background-color: #5393D7;
+    color: #ffffff;
+}
+
+.vfrc-avatar {
+    background-color: transparent;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    /* margin-right: 10px; */
+
+}
+
+
+
+.vfrc-chat-input {
+    background-color: #b9b9b9;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.vfrc-chat-input textarea {
+    background-color: #cecece !important;
+    color: #000 !important;
+    border-radius: 10px;
+
+}
+
+.vfrc-chat-input--button {
+    background-color: #cecece !important;
+    color: #ffffff !important;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+
+.vfrc-button,
+.vfrc-launcher {
+    background-color: #ffffff;
+    color: #000;
+    border: 2px solid #195da2;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+/* Scale the div on hover */
+.vfrc-button:hover {
+    transform: scale(1.05);
+    /* Slightly increase size (5%) */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    /* Increase shadow intensity */
+}
+
+.vfrc-system-response--actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    margin-left: 18px;
+}
+
+
+/* Target the loading dots container */
+.vfrc-system-response--indicator {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+/* This targets individual dots that are part of the animation */
+.vfrc-system-response--indicator span * {
+    background-color: rgb(18, 17, 17) !important;
+    /* Change dot color to red */
+    /* animation: blink 1.5s infinite ease-in-out; */
+    animation: wave 1.5s infinite ease-in-out;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* Ensure that the animation runs as expected
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+} */
+
+
+/* Wave animation */
+@keyframes wave {
+    0% {
+        opacity: 0.2;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 0.2;
+        transform: scale(0.8);
+    }
+}
+
+
+/* In case the dots are created in a "pulse" effect, tweak the scale or opacity */
+.vfrc-system-response--indicator span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.vfrc-system-response--indicator span:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.vfrc-system-response--indicator span:nth-child(3) {
+    animation-delay: 0.8s;
+}
